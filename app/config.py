@@ -15,6 +15,11 @@ class Config:
     # Telegram Bot Configuration
     TELEGRAM_BOT_TOKEN: str = os.getenv("TELEGRAM_BOT_TOKEN", "")
     TELEGRAM_API_BASE_URL: str = "https://api.telegram.org"
+    
+    # Whatsapp Bot Configuration
+    TWILIO_ACCOUNT_SID: str = os.getenv("TWILIO_ACCOUNT_SID", "")
+    TWILIO_AUTH_TOKEN: str = os.getenv("TWILIO_AUTH_TOKEN", "")
+    TWILIO_WHATSAPP_NUMBER: str = os.getenv("TWILIO_WHATSAPP_NUMBER", "")
 
     # LLM Configuration
     LLM_PROVIDER: str = os.getenv("LLM_PROVIDER", "openai")  # Options: openai, anthropic, xai

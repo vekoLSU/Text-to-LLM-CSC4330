@@ -14,7 +14,7 @@ from app.config import config
 from app.telegram_controller import telegram_controller
 from app.llm_service import llm_service
 from app.utils.logger import logger
-
+from app.routers import whatsapp 
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
@@ -48,6 +48,7 @@ app = FastAPI(
     lifespan=lifespan
 )
 
+app.include_router(whatsapp.router)
 
 @app.get("/")
 async def root():
