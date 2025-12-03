@@ -21,6 +21,11 @@ class Config:
     LLM_API_KEY: str = os.getenv("LLM_API_KEY", "")
     LLM_MODEL: str = os.getenv("LLM_MODEL", "gpt-4o-mini")  # Default model for OpenAI
 
+    X_API_KEY = os.getenv("X_API_KEY")
+    X_API_SECRET = os.getenv("X_API_SECRET")
+    X_ACCESS_TOKEN = os.getenv("X_ACCESS_TOKEN")
+    X_ACCESS_SECRET = os.getenv("X_ACCESS_SECRET")
+
     # Server Configuration
     HOST: str = os.getenv("HOST", "0.0.0.0")
     PORT: int = int(os.getenv("PORT", "8000"))
